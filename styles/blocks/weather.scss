@@ -1,0 +1,61 @@
+.weather {
+    @extend %paddingAll;
+
+    background: url(../images/winter_back.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .weatherBlock {
+        margin-left: 50%;
+        color: white;
+        text-shadow: 0 0 2px #010101;
+
+        @media (max-width: $small) {
+            margin: 0;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 130px;
+            margin-bottom: 37px;
+
+            @media (max-width: $medium) {
+                font-size: 65px;
+            }
+
+            @media (max-width: $small) {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            margin-bottom: 45px;
+        }
+
+        a {
+            width: 170px;
+            height: 52px;
+            background-color: #0000ff;
+            color: white;
+            text-transform: uppercase;
+            line-height: 52px;
+            font-family: "Bebas Neue Bold", sans-serif;
+            font-size: 17px;
+            font-weight: 900;
+            letter-spacing: 1.2px;
+            text-align: center;
+            transition: .5s;
+
+            @media (max-width: $small) {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            &:hover {
+                outline: 2px solid #0000ff;
+                background-color: transparent;
+                color: #0000ff;
+            }
+        }
+    }
+}

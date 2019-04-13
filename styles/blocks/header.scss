@@ -1,0 +1,140 @@
+.logoAndMenu {
+    padding: 28px 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+    @media (max-width: $large) {
+        padding: 28px 45px;
+
+    }
+
+    @media (max-width: $medium) {
+        padding: 14px;
+
+        .logo {
+            width: 100%;
+        }
+    }
+
+    .headerMenu {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            list-style: none;
+            margin-right: 20px;
+
+            a {
+                text-transform: uppercase;
+                color: #0f0f0f;
+                font-family: "Bebas Neue Bold", sans-serif;
+                font-size: 24px;
+                font-weight: 900;
+                transition: .5s;
+
+                &:hover {
+                    transform: scale(1.5);
+                    text-shadow: 0 0 1px white, 5px 5px 5px #010101;
+                }
+            }
+        }
+    }
+}
+
+.headerImages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .headerLeftBlock {
+        width: 65%;
+
+        @media (max-width: $medium) {
+            width: 100%;
+        }
+
+        .leftFirst {
+            position: relative;
+
+            h1 {
+                position: absolute;
+                left: 180px;
+                bottom: 28px;
+                color: white;
+                text-shadow: 0 0 2px #010101;
+                text-transform: uppercase;
+                font-family: "Bebas Neue Bold", sans-serif;
+                font-size: 112px;
+                font-weight: 900;
+
+                @media (max-width: $large) {
+                    left: 45px;
+                }
+
+                @media (max-width: $medium) {
+                    font-size: 66px;
+                }
+
+                @media (max-width: $small) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .leftSecond {
+            padding-left: 180px;
+            display: flex;
+
+            @media (max-width: $large) {
+                padding-left: 45px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-family: "Bebas Neue Bold", sans-serif;
+                font-size: 70px;
+                font-weight: 900;
+                line-height: 88px;
+
+                @media (max-width: $medium) {
+                    font-size: 35px;
+                }
+
+                @media (max-width: $small) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .headerRightBlock {
+        width: 35%;
+
+        @media (max-width: $medium) {
+            display: none;
+        }
+
+        .rightFirst {
+            height: 50%;
+            background: url(../images/header_2.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .rightSecond {
+            height: 50%;
+            background: url(../images/header_3.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+}
