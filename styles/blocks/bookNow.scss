@@ -1,0 +1,56 @@
+.bookNow {
+    @extend %paddingAll;
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        padding: 32px;
+        background-color: #1c1c1c;
+        border-bottom: 11px solid #4e26fd;
+
+        input,
+        button {
+            width: 212px;
+            height: 49px;
+            padding: 18px;
+            box-sizing: border-box;
+            border: none;
+
+            @media (max-width: $large) {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        input {
+            font-size: 17px;
+            font-weight: 400;
+
+            &:focus {
+                outline: 2px solid #4e26fd;                
+            }
+
+            &:hover {
+                outline: 2px solid #4e26fd;
+            }
+        }
+
+        button {
+            color: white;
+            font-family: "Bebas Neue Bold", sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 1.2px;
+            background-color: #4e26fd;
+            transition: .5s;
+
+            &:hover {
+                cursor: pointer;
+                text-shadow: 0 0 2px #010101;
+                letter-spacing: 3px;
+            }
+        }
+    }
+}

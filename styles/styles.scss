@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@font-face {
+    font-family: "Bebas Neue Bold";
+    src: url(../fonts/BebasNeueBold.ttf);
+}
+
+$large: 1200px;
+$medium: 992px;
+$small: 768px;
+
+%paddingAll {
+    padding: 55px 180px;
+
+    @media (max-width: $large) {
+        padding: 25px 45px;
+    }
+
+    @media (max-width: $small) {
+        padding: 14px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #010101;
+
+    @media (max-width: $small) {
+        font-size: 12px;
+    }
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 43px;
+
+    @media (max-width: $medium) {
+        font-size: 40px;        
+    }
+
+    @media (max-width: $small) {
+        font-size: 30px;
+    }
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px #010101;
+
+    @media (max-width: $large) {
+        width: 100%;
+    }
+}
+
+.moreInfo {
+    display: block;
+    width: 173px;
+    height: 52px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #4e26fd;
+    outline: 2px solid #4e26fd;
+    text-align: center;
+    line-height: 52px;
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.44px;
+    transition: .5s;
+
+    @media (max-width: $small) {
+        width: 80%;
+    }
+
+    &:hover {
+        background-color: #4e26fd;
+        color: white;
+    }
+}
+
+@import "blocks/activities.scss";
+@import "blocks/bookNow.scss";
+@import "blocks/copyright.scss";
+@import "blocks/footer.scss";
+@import "blocks/header.scss";
+@import "blocks/hotels.scss";
+@import "blocks/rooms.scss";
+@import "blocks/weather.scss";
+@import "blocks/news.scss";

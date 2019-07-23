@@ -1,0 +1,48 @@
+.rooms {
+    @extend %paddingAll;
+
+    .roomsGrid {
+        display: grid;
+        grid-template-columns: 2fr 5fr 2fr;
+        grid-template-areas:
+            "first third fourth"
+            "second third fifth";
+        grid-gap: 20px 40px;
+        margin-bottom: 40px;
+
+        .roomsFirst {
+            grid-area: first;
+        }
+
+        .roomsSecond {
+            grid-area: second;
+        }
+
+        .roomsThird {
+            grid-area: third;
+        }
+
+        .roomsFourth {
+            grid-area: fourth;
+        }
+
+        .roomsFifth {
+            grid-area: fifth;
+        }
+
+        @media (max-width: $medium) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "first"
+            "third"
+            "fourth"
+            "second"
+            "fifth";
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 27px;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.winterActivities {
+    @extend %paddingAll;
+
+    .activitiesFlex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .activitiesList {
+        width: 20%;
+        position: relative;
+
+        @media (max-width: $small) {
+            width: 100%;
+        }
+
+        .front {
+            transition: .3s;
+            transition-delay: .3s;
+            transform: rotateY(0deg);
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        .back {
+            transition: .3s;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            box-sizing: border-box;
+            transform: rotateY(90deg);
+        }
+
+        &:hover {
+            .front {
+                transition: .3s;
+                transform: rotateY(90deg);
+            }
+
+            .back {
+                transition-delay: .3s;
+                transform: rotateY(0deg);
+            }
+        }
+    }
+}
